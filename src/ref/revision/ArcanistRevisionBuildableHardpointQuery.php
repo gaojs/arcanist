@@ -26,12 +26,13 @@ final class ArcanistRevisionBuildableHardpointQuery
       yield $this->yieldValue($refs, null);
     }
 
-    $buildables = (yield $this->yieldConduitSearch(
-      'harbormaster.buildable.search',
-      array(
-        'objectPHIDs' => array_values($diff_map),
-        'manual' => false,
-      )));
+    $buildables = []; // 手动设置为空数组，跳过API调用
+    //$buildables = (yield $this->yieldConduitSearch(
+    //  'harbormaster.buildable.search',
+    //  array(
+    //    'objectPHIDs' => array_values($diff_map),
+    //    'manual' => false,
+    //  )));
 
     $buildable_refs = array();
     foreach ($buildables as $buildable) {

@@ -12,7 +12,7 @@ final class ArcanistBuildableSymbolRef
   }
 
   public function getSimpleSymbolConduitSearchMethodName() {
-    return 'harbormaster.buildable.search';
+    return 'harbormaster.buildable.search.disabled';
   }
 
   public function getSimpleSymbolConduitSearchAttachments() {
